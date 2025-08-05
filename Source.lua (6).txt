@@ -2703,6 +2703,13 @@ function redzlib:MakeWindow(Configs)
 	
 	CloseButton.Activated:Connect(Window.CloseBtn)
 	MinimizeButton.Activated:Connect(Window.MinimizeBtn)
+     
+function Window:SetVisible(state)
+    if self.MainFrame then
+        self.MainFrame.Visible = state
+    end
+end
+        
 	return Window
 end
 
