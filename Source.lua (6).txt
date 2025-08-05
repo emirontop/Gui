@@ -2706,4 +2706,11 @@ function redzlib:MakeWindow(Configs)
 	return Window
 end
 
+
+function Window:SetVisible(state)
+    if self.MainFrame then
+        self.MainFrame.Visible = state
+    end
+end
+
 return redzlib
